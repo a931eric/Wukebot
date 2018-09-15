@@ -6,7 +6,7 @@ bot.on("ready",async()=>{
   bot.user.setActivity("皮卡丘打排球",{type:"PLAYING"});
 })
 bot.on("message",async message=>{
-  let prefix="!";
+  let prefix="";
   let messageArray=message.content.split(" ");
   let cmd=messageArray[0];
   let args=messageArray.slice(1);

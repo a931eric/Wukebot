@@ -4,7 +4,7 @@
   "description": "test bot",
   "main": "index.js",
   "scripts": {
-    "test": "node index.js"
+    "start": "node index.js"
   },
   "author": "a931eric",
   "license": "ISC",

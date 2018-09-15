@@ -14,8 +14,16 @@ bot.on("message",async message=>{
 
   //message.channel.send("recived!");
 
-  if(cmd===`${prefix}set`){
-   data.data1=args[0];
+    if(cmd===`${prefix}+`){
+    data.data1.push(args[0]);
+  message.channel.send( `${args[0]}已被加入`);
+   return;
+  }
+
+  if(cmd===`${prefix}-`){
+    let temp=data.data1[args[0]];
+    data.data1.splice(args[0], 1);
+  message.channel.send( `${temp}已被刪除`);
    return;
   }
 

@@ -16,7 +16,7 @@ bot.on("message",async message=>{
 
     if(cmd===`${prefix}+`){
     data.data1.push(args[0]);
-  message.channel.send( `${args[0]}已被加入`);
+  message.channel.send( `${args[0]}已被加入陣列`);
    return;
   }
 

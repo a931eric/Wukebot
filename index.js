@@ -1,4 +1,3 @@
-const botconfig=require("./botconfig.json");
 const data=require("./data.json");
 const Discord=require("discord.js");
 const bot=new Discord.Client({disableEveryone:true});
@@ -7,7 +6,7 @@ bot.on("ready",async()=>{
   bot.user.setActivity("皮卡丘打排球",{type:"PLAYING"});
 })
 bot.on("message",async message=>{
-  let prefix=botconfig.prefix;
+  let prefix="!";
   let messageArray=message.content.split(" ");
   let cmd=messageArray[0];
   let args=messageArray.slice(1);
@@ -42,4 +41,3 @@ bot.on("message",async message=>{
 })
 
 bot.login(process.env.BOT_TOKEN);
-//bot.login(botconfig.token);

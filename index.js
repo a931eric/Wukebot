@@ -2,11 +2,12 @@ const data=require("./data.json");
 const Discord=require("discord.js");
 const bot=new Discord.Client({disableEveryone:true});
 bot.on("ready",async()=>{
-  console.log(`${bot.user.username}is on line!`)
+  //console.log(`${bot.user.username}is on line!`)
   bot.user.setActivity("皮卡丘打排球",{type:"PLAYING"});
+  
 })
 bot.on("message",async message=>{
-  let prefix="";
+  let prefix=data.prefix;
   let messageArray=message.content.split(" ");
   let cmd=messageArray[0];
   let args=messageArray.slice(1);
